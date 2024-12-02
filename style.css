@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+.chat-bg {
+    background-image: url('images/chat_bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; 
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    background-color: #FFFFFF;
+    padding: 20px;
+    box-shadow: 0px 0px 30px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 80%;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 24px;
+    color: #1D1D1D;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.chat-box {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#posts {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    padding: 10px 10px;
+    text-align: left;
+    background-color: #EFEFEF;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding-top: 10px;
+}
+
+.post {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    color: #1D1D1D;
+    font-weight: 900;
+    max-width: 100%;
+    word-wrap: break-word;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post:hover {
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+textarea {
+    width: calc(100% - 120px);
+    height: 80px;
+    padding: 15px;
+    font-size: 16px;
+    border: 2px solid #DDDDDD;
+    border-radius: 8px;
+    resize: none;
+    margin-bottom: 20px;
+    background-color: #FFFFFF;
+    color: #333;
+    transition: border-color 0.3s ease;
+    display: inline-block;
+}
+
+textarea:focus {
+    border-color: #AA5500; /* Focus 시 테두리 색상 */
+    outline: none;
+}
+
+button {
+    width: 100px;
+    height: 80px;
+    background-color: #FF8000;
+    color: #FFFFFF;
+    border: none;
+    padding: 12px 0;
+    font-size: 32px;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #AA5500;
+}
+
+button:active {
+    transform: translateY(2px);
+}
